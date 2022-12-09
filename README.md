@@ -107,4 +107,4 @@
 
 ■画面遷移図(figma)
 
-https://www.figma.com/file/QMGtJHQt2mgoat3ZQ3oKrO/Untitled?t=GE3xFeGFwd31SEDZ-1
+https://www.figma.com/file/QMGtJHQt2mgoat3ZQ3oKrO/Untitled?t=GE3xFeGFwd31SEDZ-0
