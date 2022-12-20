@@ -29,12 +29,16 @@
           <a href='#' class='nav-link' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' id='header-profile'>
             <%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15' %>
           </a>
-          <div class='dropdown-menu dropdown-menu-right'>
-            <div class='dropdown-item'>らんてっく たろう</div>
-            <div class='dropdown-divider'></div>
-            <%= link_to 'プロフィール', '#', class: 'dropdown-item' %>
-            <%= link_to 'ログアウト', logout_path, class: 'dropdown-item', method: :delete %>
-          </div>
+
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              マイページ
+            </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><%= link_to 'プロフィール', '#', class: 'dropdown-item' %></li>
+                <li><%= link_to (t 'defaults.logout'), logout_path, class: 'dropdown-item', method: :delete %></li>
+              </ul>
+            </div>
         </li>
       </ul>
     </div>
