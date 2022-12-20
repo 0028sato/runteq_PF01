@@ -1,4 +1,6 @@
 <h1>< posts_indexのページです></h1>
 <h2>< トップページと投稿一覧を担当します。></h2>
+<% if logged_in? %>
 <h3>ユーザーの名前です:<%= current_user.name %></h3>
 <h3>ユーザーのメールアドレスです:<%= current_user.email %></h3>
+<% end %>
