@@ -5,6 +5,8 @@ ja:
     logout: 'ログアウト'
     message:
       require_login: 'ログインしてください'
+      created: '%{item}を作成しました'
+      not_created: '%{item}を作成できませんでした'
   users:
     new:
       title: 'ユーザー登録'
@@ -29,6 +31,8 @@ ja:
       no_result: '掲示板なし'
     new:
       title: '投稿作成'
+      budget: '予算'
+      body: '本文'
     bookmarks:
       title: 'お気に入り一覧'
   profiles:

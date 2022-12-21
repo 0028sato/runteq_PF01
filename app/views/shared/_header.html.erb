@@ -10,16 +10,15 @@
 
     <div class='collapse navbar-collapse' id='navbarSupportedContent'>
       <ul class='navbar-nav ml-auto main-nav align-items-center'>
-        <li class='nav-item dropdown dropdown-slide'>
-          <a href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-            掲示板
-          </a>
-
-          <div class='dropdown-menu dropdown-menu-right'>
-            <%= link_to t('posts.index.title'), root_path, class: 'dropdown-item' %>
-            <%= link_to '掲示板作成', '#', class: 'dropdown-item' %>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              掲示板
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><%= link_to t('posts.index.title'), root_path, class: 'dropdown-item' %></li>
+              <li><%= link_to t('posts.new.title'), new_post_path, class: 'dropdown-item' %></li>
+            </ul>
           </div>
-        </li>
 
         <li class='nav-item'>
           <%= link_to 'ブックマーク一覧', '#', class: 'nav-link' %>
@@ -34,12 +33,12 @@
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
               マイページ
             </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li class='dropdown-item'><%= current_user.name %></li>
-                <li><%= link_to 'プロフィール', '#', class: 'dropdown-item' %></li>
-                <li><%= link_to (t 'defaults.logout'), logout_path, class: 'dropdown-item', method: :delete %></li>
-              </ul>
-            </div>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li class='dropdown-item'><%= current_user.name %></li>
+              <li><%= link_to 'プロフィール', '#', class: 'dropdown-item' %></li>
+              <li><%= link_to (t 'defaults.logout'), logout_path, class: 'dropdown-item', method: :delete %></li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>
