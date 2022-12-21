@@ -16,7 +16,7 @@
           </a>
 
           <div class='dropdown-menu dropdown-menu-right'>
-            <%= link_to '掲示板一覧', '#', class: 'dropdown-item' %>
+            <%= link_to t('posts.index.title'), root_path, class: 'dropdown-item' %>
             <%= link_to '掲示板作成', '#', class: 'dropdown-item' %>
           </div>
         </li>
@@ -35,6 +35,7 @@
               マイページ
             </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li class='dropdown-item'><%= current_user.name %></li>
                 <li><%= link_to 'プロフィール', '#', class: 'dropdown-item' %></li>
                 <li><%= link_to (t 'defaults.logout'), logout_path, class: 'dropdown-item', method: :delete %></li>
               </ul>
