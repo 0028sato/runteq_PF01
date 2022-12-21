@@ -9,3 +9,6 @@ ja:
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         name: 'ニックネーム'
+      post:
+        budgest: '予算'
+        body: '本文'
