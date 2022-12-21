@@ -10,5 +10,6 @@ ja:
         password_confirmation: 'パスワード確認'
         name: 'ニックネーム'
       post:
-        budgest: '予算'
+        title: '投稿作成'
+        budget: '予算'
         body: '本文'
