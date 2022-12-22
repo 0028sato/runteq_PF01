@@ -5,7 +5,7 @@ ja:
     logout: 'ログアウト'
     message:
       require_login: 'ログインしてください'
-      created: '%{item}を作成しました'
+      created: '投稿しました'
       not_created: '%{item}を作成できませんでした'
   users:
     new:
