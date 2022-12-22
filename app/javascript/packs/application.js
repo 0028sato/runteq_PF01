@@ -12,8 +12,12 @@ window.$ = window.jQuery = jquery
 import * as bootstrap from "bootstrap"
 window.bootstrap = bootstrap
 import "../stylesheets/application"
+import '../javascripts/preview'
+
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
 
