@@ -33,6 +33,8 @@ ja:
       title: '投稿作成'
       budget: '予算'
       body: '本文'
+    show:
+      title: '詳細画面'
     bookmarks:
       title: 'お気に入り一覧'
   profiles:

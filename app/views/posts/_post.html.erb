@@ -2,7 +2,7 @@
   <div id="board-id-<%= post.id %>">
     <div class="card">
       <a href="#">
-        <%= image_tag post.post_image_url, class: 'card-img-top', size: '300x200' %>
+        <%= link_to (image_tag post.post_image_url, class: 'card-img-top', size: '300x200'),post_path(post) %>
       </a>
       <div class="card-body">
         <h4 class="card-title">
