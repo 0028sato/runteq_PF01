@@ -14,3 +14,5 @@ ja:
         budget: '予算'
         body: '本文'
         post_image: '画像選択'
+      like:
+        title: 'お気に入り一覧'
