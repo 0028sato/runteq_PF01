@@ -40,3 +40,11 @@ ja:
   profiles:
     show:
       title: 'プロフィール'
+  no_result: 'ブックマーク中の掲示板がありません。'
+  likes:
+    title: 'お気に入り一覧'
+    no_result: 'お気に入り中の掲示板がありません。'
+    create:
+      success: 'お気に入りしました'
+    destroy:
+      success: 'お気に入りを外しました'

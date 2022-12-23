@@ -20,14 +20,11 @@
             </ul>
           </div>
 
-        <li class='nav-item'>
-          <%= link_to 'ブックマーク一覧', '#', class: 'nav-link' %>
-        </li>
-
         <li class='nav-item dropdown dropdown-slide'>
           <a href='#' class='nav-link' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' id='header-profile'>
             <%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15' %>
           </a>
+        </li>
 
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -36,10 +33,12 @@
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li class='dropdown-item'><%= current_user.name %></li>
               <li><%= link_to 'プロフィール', '#', class: 'dropdown-item' %></li>
+              <li><%= link_to t('likes.title'), likes_posts_path, class: 'dropdown-item' %></li>
+              <li><%= link_to '自分の投稿一覧', '#', class: 'dropdown-item' %></li>
+              <li><%= link_to 'アカウント設定', '#', class: 'dropdown-item' %></li>
               <li><%= link_to (t 'defaults.logout'), logout_path, class: 'dropdown-item', method: :delete %></li>
             </ul>
           </div>
-        </li>
       </ul>
     </div>
   </nav>

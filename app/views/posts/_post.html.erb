@@ -8,10 +8,13 @@
         <h4 class="card-title">
             <%= "予算: #{post.budget} 円" %>
         </h4>
-        <div class='mr10 float-right'>
-          <a href="#"><%= icon 'fas', 'trash', class: 'pr-1' %></a>
-          <a href="#"><%= icon 'fa', 'pen' %></a>
-        </div>
+        <% if logged_in? %>
+        <% if current_user.own?(post) %>
+          <%= render 'crud_menus', post: post %>
+        <% else %>
+          <%= render 'like_button', post: post  %>
+        <% end %>
+        <% end %>
         <ul class="list-inline">
           <li class="list-inline-item">
             <%= icon 'far', 'user' %>
