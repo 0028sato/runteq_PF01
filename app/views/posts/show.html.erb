@@ -11,6 +11,13 @@
             </div>
             <div class='col-md-9'>
               <h3 class="d-inline"><%= @post.budget %></h3>
+              <% if logged_in? %>
+                <% if current_user.own?(@post) %>
+                  <%= render 'crud_menus', post: @post %>
+                <% else %>
+                  <%= render 'like_button', post: @post  %>
+                <% end %>
+              <% end %>
               <%= render 'crud_menus', post: @post %>
               <ul class="list-inline">
                 <li class="list-inline-item">by <%= @post.user.name %></li>
