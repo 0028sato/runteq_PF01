@@ -26,6 +26,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:budget, :body, :post_image, :post_image_cache)
+    params.require(:post).permit(:budget, :body, :post_image, :post_image_cache, :name, :information)
   end
 end
