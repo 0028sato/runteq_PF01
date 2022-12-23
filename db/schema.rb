@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_22_041636) do
+ActiveRecord::Schema.define(version: 2022_12_23_055631) do
 
   create_table "posts", charset: "utf8mb4", force: :cascade do |t|
     t.integer "budget", null: false
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 2022_12_22_041636) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "post_image"
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "taxonomies", charset: "utf8mb4", force: :cascade do |t|
+    t.string "type"
+    t.string "name", null: false
+    t.text "information", null: false
+    t.bigint "post_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_taxonomies_on_post_id"
   end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
@@ -33,4 +43,5 @@ ActiveRecord::Schema.define(version: 2022_12_22_041636) do
   end
 
   add_foreign_key "posts", "users"
+  add_foreign_key "taxonomies", "posts"
 end
