@@ -1,3 +1,7 @@
-<%= link_to like_path(current_user.likes.find_by(post_id: post.id)), id: "js-bookmark-button-for-board-#{post.id}", class:"float-right", method: :delete do %>
+<%= link_to like_path(current_user.likes.find_by(post_id: post.id)),
+            id: "js-bookmark-button-for-board-#{post.id}",
+            class:"float-right",
+            method: :delete,
+            remote: true do %>
   <%= icon 'fas', 'star' %>
 <% end %>

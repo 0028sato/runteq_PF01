@@ -1,3 +1,7 @@
-<%= link_to likes_path(post_id: post.id), id: "js-bookmark-button-for-board-#{post.id}", class:"float-right", method: :post do %>
+<%= link_to likes_path(post_id: post.id),
+            id: "js-bookmark-button-for-board-#{post.id}",
+            class:"float-right",
+            method: :post,
+            remote: true do %>
   <%= icon 'far', 'star' %>
 <% end %>
