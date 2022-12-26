@@ -40,6 +40,8 @@ ja:
   profiles:
     show:
       title: 'プロフィール'
+    edit:
+      title: 'プロフィール編集画面'
   no_result: 'ブックマーク中の掲示板がありません。'
   likes:
     title: 'お気に入り一覧'

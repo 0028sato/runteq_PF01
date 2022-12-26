@@ -9,6 +9,9 @@ ja:
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         name: 'ニックネーム'
+        gender: '性別'
+        age: '年齢'
+        avatar: 'プロフィール画像'
       post:
         title: '投稿作成'
         budget: '予算'
@@ -16,3 +19,5 @@ ja:
         post_image: '画像選択'
       like:
         title: 'お気に入り一覧'
+      profile:
+        title: 'プロフィール'
