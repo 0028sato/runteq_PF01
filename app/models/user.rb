@@ -12,6 +12,11 @@ class User < ApplicationRecord
   validates :email, uniqueness: true, presence: true
   validates :name, presence: true, length: { maximum: 255 }
 
+  mount_uploader :avatar, AvatarUploader
+
+  enum gender: { lgbt:0, man:1, woman:2 }
+  enum age: { no_age:0, ten:1, twenty:2, thirty:3, forty:4, fifty:5, sixty:6, seventy:7, eighty:8 }
+
   def own?(object)
     id == object.user_id
   end
