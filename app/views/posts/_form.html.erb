@@ -8,6 +8,12 @@
      <%= f.label :body %>
      <%= f.text_area :body, class: 'form-control', rows: 10 %>
    </div>
+   <div class="field">
+    <%= f.label"タグ (,で区切ると複数タグ登録できます)" %>
+    <%= f.text_field :name,value: @tag_list,class:"form-control"%>
+  </div>
+
+
    <div class="form-group">
     <%= f.label :post_image %>
     <%= f.file_field :post_image, onchange: 'previewFileWithId(preview)', class: 'form-control mb-3', accept: 'image/*' %>

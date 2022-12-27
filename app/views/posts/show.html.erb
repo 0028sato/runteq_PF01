@@ -18,7 +18,6 @@
                   <%= render 'like_button', post: @post  %>
                 <% end %>
               <% end %>
-              <%= render 'crud_menus', post: @post %>
               <ul class="list-inline">
                 <li class="list-inline-item">by <%= @post.user.name %></li>
                 <li class="list-inline-item"><%= l @post.created_at, format: :long  %></li>
@@ -26,6 +25,9 @@
             </div>
           </div>
           <%= simple_format(@post.body) %>
+            <% @post_tags.each do |tag| %>
+              <%= link_to tag.name, tag_posts_path(tag_id: tag.id) %>
+            <% end %>
         </div>
       </article>
     </div>
