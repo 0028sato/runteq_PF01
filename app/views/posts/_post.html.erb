@@ -26,6 +26,9 @@
           </li>
         </ul>
         <p class="card-text"><%= post.body %></p>
+        <% post.tags.each do |tag| %>
+          <span><%= link_to tag.name, tag_posts_path(tag_id: tag.id) %></span>
+	      <% end %>
       </div>
     </div>
   </div>
