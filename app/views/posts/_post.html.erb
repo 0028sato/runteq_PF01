@@ -9,11 +9,11 @@
             <%= "予算: #{post.budget} 円" %>
         </h4>
         <% if logged_in? %>
-        <% if current_user.own?(post) %>
-          <%= render 'crud_menus', post: post %>
-        <% else %>
-          <%= render 'like_button', post: post  %>
-        <% end %>
+          <% if current_user.own?(post) %>
+            <%= render 'crud_menus', post: post %>
+          <% else %>
+            <%= render 'like_button', post: post  %>
+          <% end %>
         <% end %>
         <ul class="list-inline">
           <li class="list-inline-item">
