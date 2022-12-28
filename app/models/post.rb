@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   belongs_to :user
 
   has_many :likes, dependent: :destroy
+  has_many :my_posts, dependent: :destroy
   has_many :taxonomies, dependent: :destroy
   has_many :post_tag_relations,dependent: :destroy
   has_many :tags,through: :post_tag_relations
@@ -27,6 +28,11 @@ class Post < ApplicationRecord
       new_post_tag = Tag.find_or_create_by(name: new)
       self.tags << new_post_tag
     end
+  end
+
+  def tag_index
+    @post = Post.find(params[:id])
+    @post_tags = @post.tags
   end
 
 end

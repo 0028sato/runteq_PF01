@@ -31,6 +31,10 @@ class PostsController < ApplicationController
     @like_posts = current_user.like_posts.includes(:user).order(created_at: :desc)
   end
 
+  def my_posts
+    @my_posts = current_user.posts.includes(:user).order(created_at: :desc)
+  end
+
   def search
     @tag_list = Tag.all
     @tag = Tag.find(params[:tag_id])
