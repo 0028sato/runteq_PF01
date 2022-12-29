@@ -26,6 +26,11 @@
           </li>
         </ul>
         <p class="card-text"><%= post.body %></p>
+        
+        <% post.snow_boards.each do |board| %>
+        <p class="card-text"><%= "板の名前 : #{board.board_name}" %></p>
+        <% end %>
+
         <% post.tags.each do |tag| %>
           <span><%= link_to tag.name, tag_posts_path(tag_id: tag.id) %></span>
 	      <% end %>

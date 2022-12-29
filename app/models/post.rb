@@ -4,9 +4,12 @@ class Post < ApplicationRecord
 
   has_many :likes, dependent: :destroy
   has_many :my_posts, dependent: :destroy
-  has_many :taxonomies, dependent: :destroy
-  has_many :post_tag_relations,dependent: :destroy
-  has_many :tags,through: :post_tag_relations
+  has_many :post_tag_relations, dependent: :destroy
+  has_many :tags, through: :post_tag_relations
+
+  has_many :post_board_relations, dependent: :destroy
+  has_many :snow_boards, through: :post_board_relations
+  accepts_nested_attributes_for :snow_boards
 
   validates :body, presence: true, length: { maximum: 65_535 }
   validates :budget, presence: true, numericality: {only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 9999999}
