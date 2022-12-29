@@ -11,13 +11,23 @@
 
   <%= f.fields_for :snow_boards, @post.snow_boards.new do | d | %>
   <div class="form-group">
-     <%= d.label :board_name %>
-     <%= d.text_field :board_name, class: 'form-control' %>
-   </div>
-   <div class="form-group">
-     <%= d.label :board_information %>
-     <%= d.text_area :board_information, class: 'form-control' %>
-   </div>
+    <%= d.label :board_name %>
+    <%= d.text_field :board_name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= d.label :board_information %>
+    <%= d.text_area :board_information, class: 'form-control' %>
+  </div>
+  <% end %>
+  <%= f.fields_for :snow_bindings, @post.snow_bindings.new do | b | %>
+  <div class="form-group">
+    <%= b.label :binding_name %>
+    <%= b.text_field :binding_name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= b.label :binding_information %>
+    <%= b.text_area :binding_information, class: 'form-control' %>
+  </div>
   <% end %>
 
    <div class="field">

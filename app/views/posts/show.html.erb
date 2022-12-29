@@ -27,8 +27,13 @@
           <%= simple_format(@post.body) %>
 
           <% @snow_boards.each do |board| %>
-          <br><%= "板の名前 : #{board.board_name}" %></br>
-          <br><%= "板の説明 : #{board.board_information}" %></br>
+          <br><%= "ボードの名前 : #{board.board_name}" %></br>
+          <br><%= "ボードの説明 : #{board.board_information}" %></br>
+          <% end %>
+
+          <% @snow_bindings.each do |binding| %>
+          <br><%= "ビンディングの名前 : #{binding.binding_name}" %></br>
+          <br><%= "ビンディングの説明 : #{binding.binding_information}" %></br>
           <% end %>
 
           <% @post_tags.each do |tag| %>
