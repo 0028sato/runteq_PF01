@@ -28,7 +28,11 @@
         <p class="card-text"><%= post.body %></p>
         
         <% post.snow_boards.each do |board| %>
-        <p class="card-text"><%= "板の名前 : #{board.board_name}" %></p>
+        <p class="card-text"><%= "ボードの名前 : #{board.board_name}" %></p>
+        <% end %>
+
+        <% post.snow_bindings.each do |binding| %>
+        <p class="card-text"><%= "ビィンディングの名前 : #{binding.binding_name}" %></p>
         <% end %>
 
         <% post.tags.each do |tag| %>

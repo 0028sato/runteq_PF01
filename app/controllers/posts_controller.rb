@@ -5,11 +5,13 @@ class PostsController < ApplicationController
     @posts = Post.all.includes(:user).order(created_at: :desc)
     @tag_list = Tag.all
     @snow_board_list = SnowBoard.all
+    @snow_binding_list = SnowBinding.all
   end
 
   def new
     @post = Post.new
     @post.snow_boards.build
+    @post.snow_bindings.build
   end
 
   def create
@@ -28,6 +30,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post_tags = @post.tags
     @snow_boards = @post.snow_boards
+    @snow_bindings = @post.snow_bindings
   end
 
   def likes
@@ -47,6 +50,8 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:budget, :body, :post_image, :post_image_cache, snow_boards_attributes: [:id, :board_name, :board_information])
+    params.require(:post).permit(:budget, :body, :post_image, :post_image_cache, 
+      snow_boards_attributes: [:id, :board_name, :board_information],
+      snow_bindings_attributes: [:id, :binding_name, :binding_information])
   end
 end
