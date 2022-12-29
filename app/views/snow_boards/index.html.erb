@@ -1,0 +1,8 @@
+<% @snow_boards.each do |s| %>
+<h6>これはitem_nameです</h6>
+<li><%= s.item_name %></li>
+<h6>これはitem_informationです</h6>
+<li><%= s.item_information %></li>
+<% end %>
+
+<%= link_to "URLURLURL", new_snow_board_path, class: 'dropdown-item' %>

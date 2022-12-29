@@ -1,0 +1,10 @@
+<%= f.fields_for :snow_boards do |i| %>
+  <div class="field">
+    <%= f.label"スノーボードの名前" %>
+    <%= f.text_field :item_name, class:"form-control"%>
+  </div>
+  <div class="field">
+    <%= f.label"スノーボードの説明" %>
+    <%= f.text_area :item_information, class:"form-control"%>
+  </div>
+<% end %>
