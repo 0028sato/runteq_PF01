@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_29_111412) do
+ActiveRecord::Schema.define(version: 2022_12_29_125919) do
 
   create_table "likes", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -48,6 +48,15 @@ ActiveRecord::Schema.define(version: 2022_12_29_111412) do
     t.index ["snow_board_id"], name: "index_post_board_relations_on_snow_board_id"
   end
 
+  create_table "post_shoe_relations", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "post_id", null: false
+    t.bigint "snow_shoe_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_post_shoe_relations_on_post_id"
+    t.index ["snow_shoe_id"], name: "index_post_shoe_relations_on_snow_shoe_id"
+  end
+
   create_table "post_tag_relations", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "post_id", null: false
     t.bigint "tag_id", null: false
@@ -82,6 +91,13 @@ ActiveRecord::Schema.define(version: 2022_12_29_111412) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "snow_shoes", charset: "utf8mb4", force: :cascade do |t|
+    t.string "shoe_name"
+    t.text "shoe_information"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "tags", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -110,6 +126,8 @@ ActiveRecord::Schema.define(version: 2022_12_29_111412) do
   add_foreign_key "post_binding_relations", "snow_bindings"
   add_foreign_key "post_board_relations", "posts"
   add_foreign_key "post_board_relations", "snow_boards"
+  add_foreign_key "post_shoe_relations", "posts"
+  add_foreign_key "post_shoe_relations", "snow_shoes"
   add_foreign_key "post_tag_relations", "posts"
   add_foreign_key "post_tag_relations", "tags"
   add_foreign_key "posts", "users"

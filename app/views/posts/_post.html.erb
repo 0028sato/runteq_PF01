@@ -35,6 +35,10 @@
         <p class="card-text"><%= "ビィンディングの名前 : #{binding.binding_name}" %></p>
         <% end %>
 
+        <% post.snow_shoes.each do |shoes| %>
+        <p class="card-text"><%= "ブーツの名前 : #{shoes.shoe_name}" %></p>
+        <% end %>
+
         <% post.tags.each do |tag| %>
           <span><%= link_to tag.name, tag_posts_path(tag_id: tag.id) %></span>
 	      <% end %>

@@ -15,6 +15,10 @@ class Post < ApplicationRecord
   has_many :snow_bindings, through: :post_binding_relations
   accepts_nested_attributes_for :snow_bindings
 
+  has_many :post_shoe_relations, dependent: :destroy
+  has_many :snow_shoes, through: :post_shoe_relations
+  accepts_nested_attributes_for :snow_shoes
+
   validates :body, presence: true, length: { maximum: 65_535 }
   validates :budget, presence: true, numericality: {only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 9999999}
 

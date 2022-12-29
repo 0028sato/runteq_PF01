@@ -6,12 +6,14 @@ class PostsController < ApplicationController
     @tag_list = Tag.all
     @snow_board_list = SnowBoard.all
     @snow_binding_list = SnowBinding.all
+    @snow_shoes_list = SnowShoe.all
   end
 
   def new
     @post = Post.new
     @post.snow_boards.build
     @post.snow_bindings.build
+    @post.snow_shoes.build
   end
 
   def create
@@ -31,6 +33,7 @@ class PostsController < ApplicationController
     @post_tags = @post.tags
     @snow_boards = @post.snow_boards
     @snow_bindings = @post.snow_bindings
+    @snow_shoes = @post.snow_shoes
   end
 
   def likes
@@ -52,6 +55,7 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:budget, :body, :post_image, :post_image_cache, 
       snow_boards_attributes: [:id, :board_name, :board_information],
-      snow_bindings_attributes: [:id, :binding_name, :binding_information])
+      snow_bindings_attributes: [:id, :binding_name, :binding_information],
+      snow_shoes_attributes: [:id, :shoe_name, :shoe_information])
   end
 end

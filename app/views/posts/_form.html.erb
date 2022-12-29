@@ -18,6 +18,7 @@
     <%= d.label :board_information %>
     <%= d.text_area :board_information, class: 'form-control' %>
   </div>
+
   <% end %>
   <%= f.fields_for :snow_bindings, @post.snow_bindings.new do | b | %>
   <div class="form-group">
@@ -27,6 +28,17 @@
   <div class="form-group">
     <%= b.label :binding_information %>
     <%= b.text_area :binding_information, class: 'form-control' %>
+  </div>
+  <% end %>
+
+  <%= f.fields_for :snow_shoes, @post.snow_shoes.new do | b | %>
+  <div class="form-group">
+    <%= b.label :shoe_name %>
+    <%= b.text_field :shoe_name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= b.label :shoe_information %>
+    <%= b.text_area :shoe_information, class: 'form-control' %>
   </div>
   <% end %>
 
