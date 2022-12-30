@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   skip_before_action :require_login, only: %i[index]
+  before_action :find_post, only: [:edit, :update, :destroy]
   
   def index
     @posts = Post.all.includes(:user).order(created_at: :desc)
@@ -36,6 +37,29 @@ class PostsController < ApplicationController
     @snow_shoes = @post.snow_shoes
   end
 
+  def edit
+    @tag_list = @post.tags.pluck(:name).join(',')
+    @snow_board_list = @post.snow_boards.pluck(:board_name, :board_information)
+    @snow_binding_list = @post.snow_bindings.pluck(:binding_name, :binding_information)
+    @snow_shoe_list = @post.snow_shoes.pluck(:shoe_name, :shoe_information)
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    tag_list = params[:post][:name].split(',')
+    if @post.update(post_params)
+      @post.save_tag(tag_list)
+      redirect_to @post, success: t('defaults.message.updated', item: Post.model_name.human)
+    else
+      flash.now[:danger] = t('defaults.message.not_updated', item: Post.model_name.human)
+    end
+  end
+
+  def destroy
+    @post.destroy!
+    redirect_to posts_path, success: t('defaults.message.deleted', item: Post.model_name.human)
+  end
+
   def likes
     @like_posts = current_user.like_posts.includes(:user).order(created_at: :desc)
   end
@@ -57,5 +81,9 @@ class PostsController < ApplicationController
       snow_boards_attributes: [:id, :board_name, :board_information],
       snow_bindings_attributes: [:id, :binding_name, :binding_information],
       snow_shoes_attributes: [:id, :shoe_name, :shoe_information])
+  end
+
+  def find_post
+    @post = current_user.posts.find(params[:id])
   end
 end
