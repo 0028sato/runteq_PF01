@@ -3,6 +3,9 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
+    search_board_name: 'ボード名検索'
+    search_binding_name: 'ビンディング名検索'
+    search_shoes_name: 'ブーツ名検索'
     message:
       require_login: 'ログインしてください'
       created: '投稿しました'

@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:edit, :update, :destroy]
   
   def index
-    @posts = Post.all.includes(:user).order(created_at: :desc)
+    @q = Post.ransack(params[:q])
+    @posts = @q.result(distinct: true).includes(:user).order(created_at: :desc)
     @tag_list = Tag.all
     @snow_board_list = SnowBoard.all
     @snow_binding_list = SnowBinding.all
@@ -61,11 +62,12 @@ class PostsController < ApplicationController
   end
 
   def likes
-    @like_posts = current_user.like_posts.includes(:user).order(created_at: :desc)
+    @q = current_user.like_posts.ransack(params[:q])
+    @like_posts = @q.result(distinct: true).includes(:user).order(created_at: :desc)
   end
 
   def my_posts
-    @my_posts = current_user.posts.includes(:user).order(created_at: :desc)
+    @my_posts = @q.result(distinct: true).includes(:user).order(created_at: :desc)
   end
 
   def search
