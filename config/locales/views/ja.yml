@@ -7,6 +7,10 @@ ja:
       require_login: 'ログインしてください'
       created: '投稿しました'
       not_created: '%{item}を作成できませんでした'
+      updated: "%{item}を更新しました"
+      not_updated: "%{item}を更新できませんでした"
+      deleted: "%{item}を削除しました"
+      delete_confirm: '削除しますか？'
   users:
     new:
       title: 'ユーザー登録'
@@ -35,6 +39,8 @@ ja:
       body: '本文'
     show:
       title: '詳細画面'
+    edit:
+      title: '投稿編集画面'
     bookmarks:
       title: 'お気に入り一覧'
   profiles:

@@ -9,7 +9,7 @@
      <%= f.text_area :body, class: 'form-control', rows: 10 %>
    </div>
 
-  <%= f.fields_for :snow_boards, @post.snow_boards.new do | d | %>
+  <%= f.fields_for :snow_boards, @post.snow_boards do | d | %>
   <div class="form-group">
     <%= d.label :board_name %>
     <%= d.text_field :board_name, class: 'form-control' %>
@@ -20,7 +20,7 @@
   </div>
 
   <% end %>
-  <%= f.fields_for :snow_bindings, @post.snow_bindings.new do | b | %>
+  <%= f.fields_for :snow_bindings, @post.snow_bindings do | b | %>
   <div class="form-group">
     <%= b.label :binding_name %>
     <%= b.text_field :binding_name, class: 'form-control' %>
@@ -31,7 +31,7 @@
   </div>
   <% end %>
 
-  <%= f.fields_for :snow_shoes, @post.snow_shoes.new do | b | %>
+  <%= f.fields_for :snow_shoes, @post.snow_shoes do | b | %>
   <div class="form-group">
     <%= b.label :shoe_name %>
     <%= b.text_field :shoe_name, class: 'form-control' %>
