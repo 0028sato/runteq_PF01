@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   
   def index
     @q = Post.ransack(params[:q])
-    @posts = @q.result(distinct: true).includes(:user).order(created_at: :desc)
+    @posts = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
     @tag_list = Tag.all
     @snow_board_list = SnowBoard.all
     @snow_binding_list = SnowBinding.all
@@ -63,7 +63,7 @@ class PostsController < ApplicationController
 
   def likes
     @q = current_user.like_posts.ransack(params[:q])
-    @like_posts = @q.result(distinct: true).includes(:user).order(created_at: :desc)
+    @like_posts = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def my_posts
