@@ -35,7 +35,7 @@
               <li><%= link_to (t 'profiles.show.title'), profile_path, class: 'dropdown-item' %></li>
               <li><%= link_to t('likes.title'), likes_posts_path, class: 'dropdown-item' %></li>
               <li><%= link_to '自分の投稿一覧', my_posts_posts_path, class: 'dropdown-item' %></li>
-              <li><%= link_to 'アカウント設定', '#', class: 'dropdown-item' %></li>
+              <li><%= link_to 'アカウント設定', new_password_reset_path, class: 'dropdown-item' %></li>
               <li><%= link_to (t 'defaults.logout'), logout_path, class: 'dropdown-item', method: :delete %></li>
             </ul>
           </div>
