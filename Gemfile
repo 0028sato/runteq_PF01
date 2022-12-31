@@ -37,6 +37,7 @@ gem 'pry-byebug'
 gem 'rails-i18n', '~> 6.0.0'
 gem 'carrierwave'
 gem 'ransack'
+gem 'kaminari'
 
 gem 'enum_help'
 
