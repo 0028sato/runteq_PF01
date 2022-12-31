@@ -6,6 +6,7 @@ ja:
     search_board_name: 'ボード名検索'
     search_binding_name: 'ビンディング名検索'
     search_shoes_name: 'ブーツ名検索'
+    password_reset: 'パスワードリセット'
     message:
       require_login: 'ログインしてください'
       created: '投稿しました'
@@ -31,6 +32,17 @@ ja:
       fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
+  password_resets:
+    new:
+      title: 'パスワードリセット申請'
+      submit: '送信'
+    edit:
+      title: 'パスワードリセット'
+    create:
+      success: 'パスワードリセット手順を送信しました'
+    update:
+      success: 'パスワードを変更しました'
+      fail: 'パスワードの変更に失敗しました'
 
   posts:
     index:
