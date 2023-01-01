@@ -67,7 +67,8 @@ class PostsController < ApplicationController
   end
 
   def my_posts
-    @my_posts = @q.result(distinct: true).includes(:user).order(created_at: :desc)
+    @q = current_user.posts.ransack(params[:q])
+    @my_posts = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def search

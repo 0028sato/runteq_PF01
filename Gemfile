@@ -39,6 +39,7 @@ gem 'carrierwave'
 gem 'ransack'
 gem 'kaminari'
 gem 'config'
+gem "gretel"
 
 gem 'enum_help'
 
