@@ -2,6 +2,8 @@
    <div class="row">
      <div class="col-lg-10 offset-lg-1">
        <!-- 検索フォーム -->
+       <% breadcrumb :home %>
+       <%= breadcrumbs separator: ">" %>
       <%= render 'search_form', url: posts_path %>
      </div>
    </div>
