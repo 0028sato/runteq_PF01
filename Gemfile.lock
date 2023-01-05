@@ -84,6 +84,10 @@ GEM
     crass (1.0.6)
     date (3.3.1)
     deep_merge (1.2.2)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     dry-configurable (1.0.1)
       dry-core (~> 1.0, < 2)
       zeitwerk (~> 2.6)
@@ -324,6 +328,7 @@ DEPENDENCIES
   byebug
   carrierwave
   config
+  dotenv-rails
   enum_help
   font-awesome-sass
   gretel
