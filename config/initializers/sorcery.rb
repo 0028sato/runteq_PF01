@@ -4,7 +4,7 @@
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging,
 # :magic_login, :external
-Rails.application.config.sorcery.submodules = [:reset_password]
+Rails.application.config.sorcery.submodules = [:reset_password, :external]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -80,7 +80,6 @@ Rails.application.config.sorcery.configure do |config|
   # i.e. [:twitter, :facebook, :github, :linkedin, :xing, :google, :liveid, :salesforce, :slack, :line].
   # Default: `[]`
   #
-  # config.external_providers =
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
   # Path to ca_file. By default use a internal ca-bundle.crt.
@@ -107,10 +106,15 @@ Rails.application.config.sorcery.configure do |config|
   # Twitter will not accept any requests nor redirect uri containing localhost,
   # Make sure you use 0.0.0.0:3000 to access your app in development
   #
-  # config.twitter.key = ""
-  # config.twitter.secret = ""
-  # config.twitter.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=twitter"
-  # config.twitter.user_info_mapping = {:email => "screen_name"}
+  config.external_providers = [:twitter]
+  config.twitter.key = ENV['twitter_ACCESS_KEY_ID']
+  config.twitter.secret = ENV['twitter_SECRET_ACCESS_KEY']
+  config.twitter.callback_url = Settings.sorcery[:callback_url]
+  config.twitter.user_info_path = "/1.1/account/verify_credentials.json?include_email=true"
+  config.twitter.user_info_mapping = {
+    email: 'email',
+    name: 'name'
+  }
   #
   # config.facebook.key = ""
   # config.facebook.secret = ""
@@ -218,6 +222,7 @@ Rails.application.config.sorcery.configure do |config|
   # --- user config ---
   config.user_config do |user|
     user.reset_password_mailer = UserMailer
+    user.authentications_class = Authentication
     # -- core --
     # Specify username attributes, for example: [:username, :email].
     # Default: `[:email]`

@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :like_posts, through: :likes, source: :post
   has_many :my_posts, dependent: :destroy
   has_many :my_post_relations, through: :my_posts, source: :post
+  has_many :authentications, dependent: :destroy
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
@@ -19,6 +20,8 @@ class User < ApplicationRecord
 
   enum gender: { lgbt:0, man:1, woman:2 }
   enum age: { no_age:0, ten:1, twenty:2, thirty:3, forty:4, fifty:5, sixty:6, seventy:7, eighty:8 }
+
+  accepts_nested_attributes_for :authentications
 
   def own?(object)
     id == object.user_id
