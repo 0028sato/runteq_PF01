@@ -202,6 +202,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.10-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.10-x86_64-linux)
+      racc (~> 1.4)
     oauth (0.6.2)
       snaky_hash (~> 2.0)
       version_gem (~> 1.1)
@@ -326,6 +328,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
