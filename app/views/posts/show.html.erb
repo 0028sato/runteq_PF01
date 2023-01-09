@@ -1,52 +1,69 @@
-<% breadcrumb :show_post %>
+<% breadcrumb :show_post, @post %>
 <%= breadcrumbs separator: ">" %>
-<div class="container pt-5">
-  <div class="row mb-3">
-    <div class="col-lg-8 offset-lg-2">
-      <h1><%= t('.title') %></h1>
-      <!-- 掲示板内容 -->
-      <article class="card">
-        <div class="card-body">
-          <div class='row'>
-            <div class='col-md-3'>
-              <%= image_tag @post.post_image.url, class: 'card-img-top img-fluid', size: '300x200' %>
-            </div>
-            <div class='col-md-9'>
-              <h3 class="d-inline"><%= @post.budget %></h3>
-              <% if logged_in? %>
-                <% if current_user.own?(@post) %>
-                  <%= render 'crud_menus', post: @post %>
-                <% else %>
-                  <%= render 'like_button', post: @post  %>
-                <% end %>
-              <% end %>
-              <ul class="list-inline">
-                <li class="list-inline-item">by <%= @post.user.name %></li>
-                <li class="list-inline-item"><%= l @post.created_at, format: :long  %></li>
-              </ul>
-            </div>
-          </div>
-          <%= simple_format(@post.body) %>
 
+    <div class="back-image">
+      <h1 class="show-title"><%= t('.title') %></h1>
+      <!-- 掲示板内容 -->
+      <div class="flex_show">
+          <div class='row'>
+              <%= image_tag @post.post_image.url, class: 'card-img-top-show img-fluid', size: '300x200' %>
+          </div>
+
+        <div class="right_show">
           <% @snow_boards.each do |board| %>
-          <br><%= "ボードの名前 : #{board.board_name}" %></br>
-          <br><%= "ボードの説明 : #{board.board_information}" %></br>
+          <p><%= "ボードの名前 : #{board.board_name}" %></p>
+          <p><%= raw Rinku.auto_link("ボードの説明 : #{board.board_information}") %></p>
           <% end %>
 
+
           <% @snow_bindings.each do |binding| %>
-          <br><%= "ビンディングの名前 : #{binding.binding_name}" %></br>
-          <br><%= "ビンディングの説明 : #{binding.binding_information}" %></br>
+          <p><%= "ビンディングの名前 : #{binding.binding_name}" %></p>
+          <p><%= raw Rinku.auto_link("ビンディングの説明 : #{binding.binding_information}") %></p>
           <% end %>
 
           <% @snow_shoes.each do |shoes| %>
-          <br><%= "ブーツの名前 : #{shoes.shoe_name}" %></br>
-          <br><%= "ブーツの説明 : #{shoes.shoe_information}" %></br>
+          <p><%= "ブーツの名前 : #{shoes.shoe_name}" %></p>
+          <p><%= raw Rinku.auto_link("ブーツの説明 : #{shoes.shoe_information}") %></p>
           <% end %>
 
+          <div class="body_show"><%= raw Rinku.auto_link(simple_format("本文: #{@post.body}")) %></div>
+
+          <p><%= "金額: #{@post.budget}円" %></p>
+
+
+        <div class="tag">
           <% @post_tags.each do |tag| %>
             <%= link_to tag.name, tag_posts_path(tag_id: tag.id) %>
           <% end %>
         </div>
-      </article>
+
+          <%= link_to "https://twitter.com/share?url=#{ request.url }&text=#{@post.post_image}%0a%0a#{ @post.body }、シェアさいこう〜", target: '_blank' do %>
+            <i class="fab fa-twitter" style='color: #3399FF;'></i>シェア
+          <% end %>
+
+          <% if logged_in? %>
+            <% if current_user.own?(@post) %>
+              <%= render 'crud_menus', post: @post %>
+            <% else %>
+              <%= render 'like_button', post: @post  %>
+            <% end %>
+          <% end %>
+
+              <li class="list-inline-item">by <%= @post.user.name %></li>
+              <li class="list-inline-item"><%= l @post.created_at, format: :long  %></li>
+        </div>
+      </div>
+
+          <div class="search-box-rakuten">
+            <h4>製品名を楽天市場で検索</h4> 
+              <%= form_with url: items_search_path, method: :get, local: true do |f| %>
+                <div class="form-group">
+                  <%= f.text_field :keyword, value: params[:keyword], class: "form-control" %>
+                  <%= f.submit '製品名で検索', class: "form-control btn btn-success" %>
+                </div>
+              <% end %>
+              <% if @items.present? %>
+                <%= render 'items/item' %>
+              <% end %>
+          </div>
     </div>
-  </div>

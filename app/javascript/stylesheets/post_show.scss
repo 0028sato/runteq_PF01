@@ -1,0 +1,36 @@
+
+.flex_show{
+    display: flex;
+    margin: 40px;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.flex_show .card-img-top-show{
+    width: 400px;
+    height: 600px;
+    padding: 10px;
+    margin: 10px 10px 10px 50px;
+    overflow: hidden;
+}
+
+.flex_show .right_show {
+    margin: 30px 20px 20px 80px;
+    padding: 0;
+  }
+
+.right_show p{
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    margin: 20px;
+}
+
+
+
+.show-title{
+    width:500px;
+    margin: 0px 40%;
+}
+

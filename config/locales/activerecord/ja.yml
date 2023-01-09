@@ -2,7 +2,7 @@ ja:
   activerecord:
     models:
       user: 'ユーザー'
-      board: '掲示板'
+      post: '投稿'
     attributes:
       user:
         email: 'メールアドレス'
@@ -14,10 +14,21 @@ ja:
         avatar: 'プロフィール画像'
       post:
         title: '投稿作成'
-        budget: '予算'
+        budget: 'カスタム費用(合計)'
         body: '本文'
         post_image: '画像選択'
       like:
         title: 'お気に入り一覧'
       profile:
         title: 'プロフィール'
+      
+      snow_board:
+        board_name: 'Board Name'
+        board_information: 'Board Information'
+      snow_binding:
+        binding_name: 'Binding Name'
+        binding_information: 'Binding Information'
+      snow_shoe:
+        shoe_name: 'Boots Name'
+        shoe_information: 'Boots Information'
+

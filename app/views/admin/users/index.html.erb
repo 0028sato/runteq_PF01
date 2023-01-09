@@ -1,0 +1,42 @@
+<%= search_form_for @q, url: admin_users_path do |f| %>
+<div class="row">
+  <div class="form-inline align-items-center mx-auto">
+    <div class="col-auto">
+      <%= f.search_field :name_cont, class: 'form-control', placeholder: '検索ワード' %>
+    </div>
+      <div class="col-auto">
+        <%= f.select :role_eq, User.roles_i18n.invert.map{ |key, value| [key, User.roles[value]] }, { include_blank: '指定なし' }, { class: 'form-control' } %>
+    </div>
+    <div class="col-auto">
+      <%= f.submit value: '検索', class: 'btn btn-primary' %>
+    </div>
+ </div>
+</div>
+<% end %>
+
+<h1><%= "ユーザー一覧画面" %></h1>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col"><%= User.human_attribute_name(:id) %></th>
+          <th scope="col"><%= User.human_attribute_name(:name) %></th>
+          <th scope="col"><%= User.human_attribute_name(:role) %></th>
+          <th scope="col"><%= User.human_attribute_name(:created_at) %></th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <%= render @users %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <!-- ページネーション -->
+      <%= paginate @users %>
+    </div>
+  </div>
+</div>

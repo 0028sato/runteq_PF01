@@ -40,6 +40,8 @@ gem 'ransack'
 gem 'kaminari'
 gem 'config'
 gem "gretel"
+gem 'rakuten_web_service'
+gem 'rinku'
 
 gem 'enum_help'
 gem 'dotenv-rails'

@@ -1,0 +1,65 @@
+<%= form_with model: @post, url: admin_post_path(@post), local: true do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <%= f.fields_for :snow_boards, @post.snow_boards do | d | %>
+  <div class="form-group-post">
+    <%= d.label :board_name %>
+    <%= d.text_field :board_name, class: 'form-control' %>
+  </div>
+  <div class="form-group-post">
+    <%= d.label :board_information %>
+    <%= d.text_area :board_information, class: 'form-control', placeholder: "例: キャンバー, フレックス: ハード, サイズ: 148cm" %>
+  </div>
+
+  <% end %>
+  <%= f.fields_for :snow_bindings, @post.snow_bindings do | b | %>
+  <div class="form-group-post">
+    <%= b.label :binding_name %>
+    <%= b.text_field :binding_name, class: 'form-control' %>
+  </div>
+  <div class="form-group-post">
+    <%= b.label :binding_information %>
+    <%= b.text_area :binding_information, class: 'form-control', placeholder: "例: アングル 前:21 後:9 , 硬さ: ハード" %>
+  </div>
+  <% end %>
+
+  <%= f.fields_for :snow_shoes, @post.snow_shoes do | b | %>
+  <div class="form-group-post">
+    <%= b.label :shoe_name %>
+    <%= b.text_field :shoe_name, class: 'form-control' %>
+  </div>
+  <div class="form-group-post">
+    <%= b.label :shoe_information %>
+    <%= b.text_area :shoe_information, class: 'form-control', placeholder: "例: サイズ: 26cm , 硬さ: ハード, 紐" %>
+  </div>
+  <% end %>
+
+  <div class="form-group-post">
+    <%= f.label :budget %>
+    <%= f.text_field :budget, class: 'form-control', placeholder: "数字のみ入力してください" %>
+  </div>
+
+  <div class="form-group-post">
+    <%= f.label :body %>
+    <%= f.text_area :body, class: 'form-control', rows: 5, placeholder: "例: 普段のスタイルはカービングをメインにしています。初めてのボードはナイターで尾骶骨が逝きました。" %>
+  </div>
+
+  <div class="field">
+    <%= f.label"タグ (,で区切ると複数タグ登録できます)" %>
+    <%= f.text_field :name, value: @tag_list, class:"form-control", placeholder: "例: カービング,burton,union" %>
+  </div>
+
+   <div class="form-group">
+    <%= f.label :post_image %>
+    <%= f.file_field :post_image, onchange: 'previewFileWithId(preview)', class: 'form-control mb-3', accept: 'image/*' %>
+    <%= f.hidden_field :post_image_cache %>
+  </div>
+
+  <div class='mt-3 mb-3'>
+    <%= image_tag @post.post_image.url,
+                  id: "preview",
+                  size: '300x200' %>
+  </div>
+
+   <%= f.submit class: 'btn btn-primary' %>
+ <% end %>
