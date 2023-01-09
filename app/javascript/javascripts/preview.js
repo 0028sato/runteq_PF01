@@ -10,5 +10,5 @@ window.previewFileWithId = function(id) {
     } else {
       preview.src = '';
    }
-  } 
+  }
   
