@@ -37,10 +37,6 @@
           <% end %>
         </div>
 
-          <%= link_to "https://twitter.com/share?url=#{ request.url }&text=#{@post.post_image}%0a%0a#{ @post.body }、シェアさいこう〜", target: '_blank' do %>
-            <i class="fab fa-twitter" style='color: #3399FF;'></i>シェア
-          <% end %>
-
           <% if logged_in? %>
             <% if current_user.own?(@post) %>
               <%= render 'crud_menus', post: @post %>
