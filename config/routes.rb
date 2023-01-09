@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'user_sessions/new'
+  end
+  namespace :admin do
+    get 'dashboards/index'
+  end
+  get 'items/search'
   get 'password_resets/new'
   get 'password_resets/create'
   get 'password_resets/edit'
@@ -29,5 +36,16 @@ Rails.application.routes.draw do
   end
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
+
+  get 'items/search'
+
+  namespace :admin do
+    root to: 'dashboards#index'
+    get 'login', to: 'user_sessions#new'
+    post 'login', to: 'user_sessions#create'
+    delete 'logout', to: 'user_sessions#destroy'
+    resources :posts
+    resources :users
   end
 end

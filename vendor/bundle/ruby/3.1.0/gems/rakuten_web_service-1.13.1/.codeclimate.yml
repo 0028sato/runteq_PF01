@@ -1,0 +1,13 @@
+version: "2"
+plugins:
+  rubocop:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+        - ruby
+exclude_patterns:
+  - "bin/"
+  - "spec/"
+  - "examples/"

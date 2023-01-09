@@ -1,21 +1,30 @@
-<div class="col-sm-12 col-lg-4 mb-3">
+
   <div id="board-id-<%= post.id %>">
-    <div class="card">
-      <a href="#">
-        <%= link_to (image_tag post.post_image_url, class: 'card-img-top', size: '300x200'),post_path(post) %>
-      </a>
-      <div class="card-body">
-        <h4 class="card-title">
-            <%= "予算: #{post.budget} 円" %>
-        </h4>
-        <% if logged_in? %>
-          <% if current_user.own?(post) %>
-            <%= render 'crud_menus', post: post %>
-          <% else %>
-            <%= render 'like_button', post: post  %>
-          <% end %>
+    <div class="flex">
+        <%= link_to (image_tag post.post_image_url, class: 'card-img-top1', size: '300x400'),post_path(post) %>
+
+        
+      <div class="right">
+        <% post.snow_boards.each do |board| %>
+        <p class="board-name"><%= "ボードの名前 : #{board.board_name}" %></p>
         <% end %>
-        <ul class="list-inline">
+
+        <% post.snow_bindings.each do |binding| %>
+        <p class="board-name"><%= "ビィンディングの名前 : #{binding.binding_name}" %></p>
+        <% end %>
+
+        <% post.snow_shoes.each do |shoes| %>
+        <p class="board-name"><%= "ブーツの名前 : #{shoes.shoe_name}" %></p>
+        <% end %>
+
+        <p class="card-text"><%= raw Rinku.auto_link("本文: #{post.body}") %></p>
+
+        <p class="card-title"><%= "予算: #{post.budget} 円" %></p>
+
+        <% post.tags.each do |tag| %>
+          <span><%= link_to tag.name, tag_posts_path(tag_id: tag.id) %></span>
+	      <% end %>
+
           <li class="list-inline-item">
             <%= icon 'far', 'user' %>
             <%= post.user.name %>
@@ -24,25 +33,14 @@
             <%= icon 'far', 'calendar' %>
             <%= l post.created_at, format: :long %>
           </li>
-        </ul>
-        <p class="card-text"><%= post.body %></p>
-        
-        <% post.snow_boards.each do |board| %>
-        <p class="card-text"><%= "ボードの名前 : #{board.board_name}" %></p>
-        <% end %>
 
-        <% post.snow_bindings.each do |binding| %>
-        <p class="card-text"><%= "ビィンディングの名前 : #{binding.binding_name}" %></p>
+        <% if logged_in? %>
+          <% if current_user.own?(post) %>
+            <%= render 'crud_menus', post: post %>
+          <% else %>
+            <%= render 'like_button', post: post  %>
+          <% end %>
         <% end %>
-
-        <% post.snow_shoes.each do |shoes| %>
-        <p class="card-text"><%= "ブーツの名前 : #{shoes.shoe_name}" %></p>
-        <% end %>
-
-        <% post.tags.each do |tag| %>
-          <span><%= link_to tag.name, tag_posts_path(tag_id: tag.id) %></span>
-	      <% end %>
       </div>
     </div>
   </div>
-</div>

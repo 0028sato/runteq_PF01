@@ -27,8 +27,19 @@ crumb :new_post do
   parent :home
 end
 
-crumb :show_post do
-  link '投稿詳細', post_path
+crumb :show_post do |post|
+  link '投稿詳細', post_path(post)
+  parent :home
+end
+
+crumb :edit_post do |post|
+  link '投稿編集画面'
+  parent :show_post, post
+end
+
+
+crumb :rakuten_search do
+  link '楽天で検索' ,items_search_path
   parent :home
 end
 
