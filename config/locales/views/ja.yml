@@ -57,8 +57,10 @@ ja:
       title: '詳細画面'
     edit:
       title: '投稿編集画面'
-    bookmarks:
+    likes:
       title: 'お気に入り一覧'
+    my_posts:
+      title: '自分の投稿一覧'
   profiles:
     show:
       title: 'プロフィール'
