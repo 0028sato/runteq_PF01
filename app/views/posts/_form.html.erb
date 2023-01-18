@@ -1,3 +1,4 @@
+<div class="back_image">
 <%= form_with model: post, local: true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
 
@@ -61,5 +62,6 @@
                   size: '300x200' %>
   </div>
 
-   <%= f.submit class: 'btn btn-primary' %>
- <% end %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+</div>

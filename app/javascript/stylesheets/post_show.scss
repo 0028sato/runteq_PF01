@@ -1,9 +1,9 @@
-
 .flex_show{
     display: flex;
     margin: 40px;
-    border: solid 3px #6091d3;/*線*/
-    border-radius: 10px;/*角の丸み*/
+    border: solid 3px #6091d3;
+    border-radius: 10px;
+    background: white;
 }
 
 .flex_show .card-img-top-show{
@@ -25,12 +25,10 @@
     border-top: solid 5px #5d627b;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
     margin: 20px;
+    width: 600px;
 }
-
-
 
 .show-title{
     width:500px;
     margin: 0px 40%;
 }
-

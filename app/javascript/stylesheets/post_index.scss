@@ -1,8 +1,9 @@
 .flex{
     display: flex;
     margin: 20px;
-    border: solid 3px #6091d3;/*線*/
-    border-radius: 10px;/*角の丸み*/
+    border: solid 3px #6091d3;
+    border-radius: 10px;
+    background: white;
 }
 
 .flex .card-img-top1{
@@ -27,6 +28,7 @@
     border-top: solid 5px #5d627b;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
     margin: 30px;
+    width: 600px;
 }
 
 .body{
@@ -52,11 +54,7 @@
     bottom: 200px;
 }
 
-.back-image {
-
-    background-repeat: no-repeat;
+.back-image{
+    background: url(/images/back-image.jpg);
     background-size: cover;
-    background-position: center;
-  }
-
-
+}

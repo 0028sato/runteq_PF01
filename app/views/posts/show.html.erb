@@ -1,7 +1,7 @@
+<% content_for(:title, t('.title')) %>
 <% breadcrumb :show_post, @post %>
 <%= breadcrumbs separator: ">" %>
 
-    <div class="back-image">
       <h1 class="show-title"><%= t('.title') %></h1>
       <!-- 掲示板内容 -->
       <div class="flex_show">
@@ -62,4 +62,4 @@
                 <%= render 'items/item' %>
               <% end %>
           </div>
-    </div>
+
