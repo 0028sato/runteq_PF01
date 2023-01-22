@@ -1,6 +1,8 @@
 <% content_for(:title, t('.title')) %>
-<% breadcrumb :my_posts %>
-<%= breadcrumbs separator: ">" %>
+<div class="breadcrumb">
+  <% breadcrumb :my_posts %>
+  <%= breadcrumbs separator: ">" %>
+</div>
  <div class="container">
    <div class="row">
      <div class="col-lg-8 offset-lg-2">
