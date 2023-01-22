@@ -32,6 +32,7 @@
             <%= icon 'far', 'calendar' %>
             <%= l post.created_at, format: :long %>
           </li>
+          <%= link_to t('defaults.show'), post_path(post), class: 'btn btn-success float-left' %>
 
         <% if logged_in? %>
           <% if current_user.own?(post) %>

@@ -18,8 +18,9 @@
          <% else %>
            <p><%= t('.no_result') %></p>
          <% end %>
-      </div>
-       <%= paginate @posts %>
+         <div class="pagenate">
+           <%= paginate @posts %>
+         </div>
       </div>
     </div>
   </div>

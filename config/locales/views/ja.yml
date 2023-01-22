@@ -7,6 +7,8 @@ ja:
     search_binding_name: 'ビンディング'
     search_shoes_name: 'ブーツ'
     password_reset: 'パスワードリセット'
+    edit: '編集'
+    show: '詳細'
     message:
       require_login: 'ログインしてください'
       created: '投稿しました'

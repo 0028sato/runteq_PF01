@@ -1,5 +1,7 @@
-<% breadcrumb :users %>
-<%= breadcrumbs separator: ">" %>
+<div class="breadcrumb">
+  <% breadcrumb :users %>
+  <%= breadcrumbs separator: ">" %>
+</div>
 <% content_for(:title, t('.title')) %>
 <div class="container pt-3">
   <div class="row">

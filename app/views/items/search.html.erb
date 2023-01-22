@@ -1,10 +1,12 @@
-<% breadcrumb :rakuten_search, @post %>
-<%= breadcrumbs separator: ">" %>
+<div class="breadcrumb">
+  <% breadcrumb :rakuten_search, @post %>
+  <%= breadcrumbs separator: ">" %>
+</div>
 
-<h1>製品名を入力して検索</h1>
-<div class="search-box">
+<div class="rakuten-search-box">
+  <h4>製品名を入力して楽天で検索</h4>
     <%= form_with url: items_search_path, method: :get, local: true do |f| %>
-    <div class="form-group">
+    <div class="rakuten-form-group">
         <%= f.text_field :keyword, value: params[:keyword], class: "form-control" %>
         <%= f.submit '製品名を検索', class: "form-control btn btn-success" %>
     </div>
