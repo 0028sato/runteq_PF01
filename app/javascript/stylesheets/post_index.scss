@@ -113,3 +113,120 @@
   .pagination>li>a:hover {        
     border-radius: 15px;    /*角を丸くする*/
   }
+
+@media (max-width: 599px){
+    .flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+        border: solid 3px #6091d3;
+        border-radius: 10px;
+        background: white;
+    }
+    
+    .flex .card-img-top1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        height: 400px;
+        padding: 10px;
+        margin: 10px;
+        overflow: hidden;
+    }
+    
+    .right p{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #5d627b;
+        background: white;
+        border-top: solid 5px #5d627b;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+        width: 300px;
+    }
+    
+    .body{
+        color: #5d627b;
+        background: white;
+        border-top: solid 5px #5d627b;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    }
+    
+    
+    .search-box-rakuten-show{
+        width: 300px;
+        height: 150px;
+        margin: 50px;
+        position: absolute;
+        top: 0;
+        left: 46%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        position: relative;
+        bottom: 200px;
+    }
+    
+    .search-box-rakuten-show h4{
+        position: relative;
+        top: 0;
+        left: 28%;
+    }
+    
+    .rakuten-search-box h4{
+        position: relative;
+        top: 0;
+        left: 38%;
+    }
+    
+    .rakuten-form-group{
+        width: 300px;
+        height: 150px;
+        margin: 20px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        position: relative;
+        bottom: 200px;
+    }
+    
+    .rakuten-list-group{
+        color: #5d627b;
+        background: white;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+        border: solid 3px black;
+        border-radius: 10px;
+        margin: 30px;
+    }
+    
+    .back-image{
+        background: url(/images/back-image.jpg);
+        background-size: cover;
+    }
+    
+    .pagenate{
+        position: relative;
+        left: 15px;
+    }
+    
+    .pagination>li>a {          
+        border: none;     /*枠線をなくす*/
+        color: #696969;   /*文字の色を変える*/
+      }
+      
+      /* 表示しているページ番号のデザイン */
+      .pagination>.active>a {     
+        background: #93c9ff;     /*背景の色を変える*/
+        border-radius: 15px;     /*角を丸くする*/
+      }
+      
+      /*ホバー時のデザイン*/
+      .pagination>li>a:hover {        
+        border-radius: 15px;    /*角を丸くする*/
+      }
+}

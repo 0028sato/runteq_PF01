@@ -43,3 +43,55 @@
     top: 0px;
     right: 100px;
 }
+
+@media (max-width: 599px){
+    .mypage{
+        width: 3px;
+        height: auto;
+        position: relative;
+        top: 0px;
+        left: 50px;
+    }
+    
+    .user-icon{
+        width: 10px;
+        height: auto;
+        position: relative;
+        bottom: 7px;
+        left: 10px;
+    }
+    
+    .top-icon{
+        position: relative;
+        left: 3px;
+    }
+    
+    .board-top{
+        position: relative;
+        top: 0px;
+        right: 20px;
+    }
+    
+    .login-icon{
+        position: relative;
+        top: 0px;
+        left: 100px;
+    }
+    
+    .login-icon2{
+        position: relative;
+        top: 0px;
+        left: 730px;
+    }
+    
+    .breadcrumb{
+        font-size: large;
+        margin: 10px;
+    }
+    
+    .password-reset-title{
+        position: relative;
+        top: 0px;
+        right: 100px;
+    }
+}

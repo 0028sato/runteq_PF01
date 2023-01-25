@@ -84,6 +84,7 @@ GEM
     crass (1.0.6)
     date (3.3.1)
     deep_merge (1.2.2)
+    diff-lcs (1.5.0)
     dotenv (2.8.1)
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
@@ -124,6 +125,11 @@ GEM
       activesupport (>= 3.0.0)
     erubi (1.11.0)
     execjs (2.8.1)
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
     faraday (2.7.2)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
@@ -273,6 +279,23 @@ GEM
       ffi (~> 1.0)
     rexml (3.2.5)
     rinku (2.0.6)
+    rspec-core (3.12.0)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-mocks (3.12.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-rails (6.0.1)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
+      railties (>= 6.1)
+      rspec-core (~> 3.11)
+      rspec-expectations (~> 3.11)
+      rspec-mocks (~> 3.11)
+      rspec-support (~> 3.11)
+    rspec-support (3.12.0)
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     ruby2_keywords (0.0.5)
@@ -340,6 +363,7 @@ DEPENDENCIES
   config
   dotenv-rails
   enum_help
+  factory_bot_rails
   font-awesome-sass
   gretel
   jbuilder (~> 2.7)
@@ -356,6 +380,7 @@ DEPENDENCIES
   rakuten_web_service
   ransack
   rinku
+  rspec-rails
   sass-rails (>= 6)
   sorcery (= 0.16.4)
   spring
