@@ -1,20 +1,13 @@
 <header>
-  <nav class='navbar navbar-expand-lg navigation navbar-light bg-light'>
-    <div class="top-icon">
-    <%= link_to root_path, class: 'navbar-brand' do %>
-        <%= image_tag 'logo.png' %>
+  <nav class='navbar'>
+    <%= link_to root_path class: 'navbar-brand top-icon-image' do %>
+      <%= image_tag 'logo.png', class: 'top-icon-image' %>
     <% end %>
-    <button class='navbar-toggler' data-toggle='collapse' data-target='#navbarSupportedContent'
-      aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-      <span class='navbar-toggler-icon'></span>
-    </button>
-    </div>
 
-    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
-      <ul class='navbar-nav ml-auto main-nav align-items-center'>
+
         <div class="board-top">
           <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle board-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
               掲示板
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -24,20 +17,21 @@
           </div>
         </div>
 
+
       <div class="user-icon">
         <div class='nav-item ml-auto'>
           <a class='nav-link' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' id='header-profile'>
-            <%= link_to image_tag(current_user.avatar_url, size: '40x40', class: 'rounded-circle mr15'), profile_path %>
+            <%= link_to image_tag(current_user.avatar_url, size: '40x40', class: 'rounded-circle mr15 user-icon-phone'), profile_path %>
           </a>
         </div>
       </div>
 
+        <div class="mypage">
           <div class="dropdown">
-            <div class="mypage">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle mypage-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
               マイページ
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <ul class="dropdown-menu mypage-menu" aria-labelledby="dropdownMenuButton1">
               <li><%= link_to (t 'profiles.show.title'), profile_path, class: 'dropdown-item' %></li>
               <li><%= link_to t('likes.title'), likes_posts_path, class: 'dropdown-item' %></li>
               <li><%= link_to '自分の投稿一覧', my_posts_posts_path, class: 'dropdown-item' %></li>
@@ -46,7 +40,5 @@
             </ul>
             </div>
           </div>
-      </ul>
-    </div>
   </nav>
 </header>
