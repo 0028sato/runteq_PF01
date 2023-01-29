@@ -1,24 +1,31 @@
 .mypage{
     position: relative;
-    top: 0px;
-    left: 570px;
+    bottom: 00px;
+    right: 3%;
 }
 
-.user-icon{
+.user-icon-phone{
     position: relative;
-    bottom: 7px;
-    left: 550px;
+    bottom: 0px;
+    left: 140px;
+    width: 40px;
+    height: auto;
 }
 
-.top-icon{
+.top-icon-image{
     position: relative;
-    left: 450px;
+    left: 440px;
 }
 
 .board-top{
     position: relative;
     top: 0px;
-    right: 380px;
+    right: 45%;
+}
+
+.board-top-before{
+    position: relative;
+    right: 30%;
 }
 
 .login-icon{
@@ -30,7 +37,7 @@
 .login-icon2{
     position: relative;
     top: 0px;
-    left: 730px;
+    left: 700px;
 }
 
 .breadcrumb{
@@ -44,44 +51,58 @@
     right: 100px;
 }
 
-@media (max-width: 599px){
+@media screen and (max-width: 590px){
     .mypage{
-        width: 3px;
-        height: auto;
         position: relative;
-        top: 0px;
-        left: 50px;
+        left: 65%;
+        top: 7px;
     }
+
     
     .user-icon{
-        width: 10px;
-        height: auto;
         position: relative;
-        bottom: 7px;
-        left: 10px;
+        bottom: 4px;
+        right: 320px;
+    }
+
+    .user-icon-phone{
+        position: relative;
+        right: 1800px;
+    }
+
+    .rounded-circle{
+        position: relative;
+        left: 300px;
     }
     
-    .top-icon{
+    .top-icon-image{
         position: relative;
-        left: 3px;
+        left: 100px;
+        width: 200px;
+        height: auto;
     }
     
     .board-top{
         position: relative;
-        top: 0px;
-        right: 20px;
+        right: 58%;
+        top: 46px;
+    }
+
+    .board-top-before{
+        position: relative;
+        right: 55%;
     }
     
     .login-icon{
         position: relative;
         top: 0px;
-        left: 100px;
+        left: 200px;
     }
     
     .login-icon2{
         position: relative;
         top: 0px;
-        left: 730px;
+        left: 0px;
     }
     
     .breadcrumb{

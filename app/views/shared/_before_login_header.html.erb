@@ -1,23 +1,26 @@
 <header>
   <nav class="navbar navbar-expand-lg navigation navbar-light bg-light">
-  <div class="top-icon">
-    <%= link_to root_path class: 'navbar-brand' do %>
-      <%= image_tag 'logo.png' %>
+    <%= link_to root_path class: 'navbar-brand top-icon-image' do %>
+      <%= image_tag 'logo.png', class: 'top-icon-image' %>
     <% end %>
-    
-    <button class='navbar-toggler' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto main-nav align-items-center">
-        <div class="login-icon2">
-        <li class="nav-item">
-          <%= link_to (t 'defaults.login'), login_path, class: 'nav-link' %>
-        </li>
+
+        <div class="board-top-before">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle board-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              掲示板
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><%= link_to t('posts.index.title'), root_path, class: 'dropdown-item' %></li>
+            </ul>
+          </div>
         </div>
-      </ul>
-    </div>
+
+
+        <div class="login-icon2">
+        <div class="nav-item">
+          <%= link_to (t 'defaults.login'), login_path, class: 'nav-link' %>
+        </div>
+        </div>
   </nav>
 </header>
