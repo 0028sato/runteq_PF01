@@ -1,118 +1,186 @@
-.mypage{
-    position: relative;
-    bottom: 00px;
-    right: 3%;
+.header-main{
+    border-bottom: solid 1px white;
 }
 
-.user-icon-phone{
+.header-main > h1{
+    color: white;
+    margin: 5px;
     position: relative;
-    bottom: 0px;
-    left: 140px;
-    width: 40px;
-    height: auto;
+    top: 30px;
+    left: 2%;
+    width: 180px;
 }
 
-.top-icon-image{
+.header-main > p{
+    color: white;
     position: relative;
-    left: 440px;
+    top: 25px;
+    left: 3%;
+    width: 180px;
 }
 
-.board-top{
+.header-link{
+    text-decoration: none;
+    color: white;
     position: relative;
-    top: 0px;
-    right: 45%;
-}
-
-.board-top-before{
-    position: relative;
-    right: 30%;
-}
-
-.login-icon{
-    position: relative;
-    top: 0px;
-    left: 900px;
-}
-
-.login-icon2{
-    position: relative;
-    top: 0px;
-    left: 700px;
-}
-
-.breadcrumb{
-    font-size: large;
+    left: 45%;
+    bottom: 60px;
     margin: 10px;
 }
 
-.password-reset-title{
-    position: relative;
-    top: 0px;
-    right: 100px;
+.header-link:hover{
+    color: #fff;
+    background: #000;
 }
 
-@media screen and (max-width: 590px){
-    .mypage{
-        position: relative;
-        left: 65%;
-        top: 7px;
-    }
+.mypage-toggle{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    left: 82%;
+    bottom: 85px;
+}
 
-    
-    .user-icon{
-        position: relative;
-        bottom: 4px;
-        right: 320px;
-    }
+.before-header-link{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    left: 80%;
+    bottom: 60px;
+    margin: 10px;
+}
 
-    .user-icon-phone{
-        position: relative;
-        right: 1800px;
-    }
+.before-header-link:hover{
+    color: #fff;
+    background: #000;
+}
 
-    .rounded-circle{
-        position: relative;
-        left: 300px;
-    }
-    
-    .top-icon-image{
-        position: relative;
-        left: 100px;
-        width: 200px;
-        height: auto;
-    }
-    
-    .board-top{
-        position: relative;
-        right: 58%;
-        top: 46px;
-    }
 
-    .board-top-before{
-        position: relative;
-        right: 55%;
+
+
+
+
+@media screen and (max-width: 960px){
+    .header-main{
+        border-bottom: solid 1px black;
+        max-width: 960px;
+        margin: 0 auto;
     }
     
-    .login-icon{
+    .header-main > h1{
+        color: white;
+        margin: 5px;
         position: relative;
-        top: 0px;
-        left: 200px;
+        top: 30px;
+        left: 2%;
+        width: 180px;
     }
     
-    .login-icon2{
+    .header-main > p{
+        color: white;
         position: relative;
-        top: 0px;
-        left: 0px;
+        top: 25px;
+        left: 3%;
+        width: 180px;
     }
     
-    .breadcrumb{
-        font-size: large;
+    .header-link{
+        text-decoration: none;
+        color: white;
+        position: relative;
+        left: 45%;
+        bottom: 60px;
         margin: 10px;
     }
     
-    .password-reset-title{
+    .header-link:hover{
+        color: #fff;
+        background: #000;
+    }
+    
+    .mypage-toggle{
+        text-decoration: none;
+        color: white;
         position: relative;
-        top: 0px;
-        right: 100px;
+        left: 82%;
+        bottom: 85px;
+    }
+    
+    .before-header-link{
+        text-decoration: none;
+        color: white;
+        position: relative;
+        left: 80%;
+        bottom: 60px;
+        margin: 10px;
+    }
+    
+    .before-header-link:hover{
+        color: #fff;
+        background: #000;
+    }
+}
+
+
+
+@media screen and (max-width: 560px){
+    .header-main{
+        border-bottom: solid 1px white;
+    }
+
+    .header-main > h1{
+        box-sizing: content-box;
+        margin-left: 30px;
+        color: white;
+        position: relative;
+        top: 30px;
+        left: 0%;
+        width: 120px;
+    }
+
+    .header-main > p{
+        color: white;
+        position: relative;
+        top: 25px;
+        left: 0%;
+        width: 100px;
+        font-size: 10px;
+        margin-left: 38px;
+    }
+
+    .header-link{
+        text-decoration: none;
+        color: white;
+        position: relative;
+        top: 25px;
+        left: 6%;
+        margin: 20px;
+    }
+
+    .header-link:hover{
+        color: #fff;
+        background: #000;
+    }
+
+    .mypage-toggle{
+        text-decoration: none;
+        color: white;
+        position: relative;
+        left: 50%;
+        bottom: 0px;
+    }
+
+    .before-header-link{
+        text-decoration: none;
+        color: white;
+        position: relative;
+        left: 50%;
+        bottom: 60px;
+        margin: 10px;
+    }
+    
+    .before-header-link:hover{
+        color: #fff;
+        background: #000;
     }
 }

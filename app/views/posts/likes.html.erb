@@ -14,11 +14,11 @@
   <!-- 掲示板一覧 -->
   <div class="row">
     <div class="col-12">
-      <div class="row">
+      <div class="row like-main">
         <% if @like_posts.present? %>
           <%= render @like_posts %>
         <% else %>
-          <p><%= t('likes.no_result') %></p>
+          <p class="like-no-result"><%= t('likes.no_result') %></p>
         <% end %>
       </div>
       <%= paginate @like_posts %>

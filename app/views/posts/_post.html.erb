@@ -24,6 +24,7 @@
           <span><%= link_to tag.name, tag_posts_path(tag_id: tag.id) %></span>
 	      <% end %>
 
+        <div class="created-at-name">
           <li class="list-inline-item">
             <%= icon 'far', 'user' %>
             <%= post.user.name %>
@@ -32,8 +33,10 @@
             <%= icon 'far', 'calendar' %>
             <%= l post.created_at, format: :long %>
           </li>
-          <%= link_to t('defaults.show'), post_path(post), class: 'btn btn-success float-left' %>
+          <%= link_to t('defaults.show'), post_path(post), class: 'btn btn-border float-left show-button' %>
+        </div>
 
+      <div class="icon-edit-trash">
         <% if logged_in? %>
           <% if current_user.own?(post) %>
             <%= render 'crud_menus', post: post %>
@@ -41,6 +44,7 @@
             <%= render 'like_button', post: post  %>
           <% end %>
         <% end %>
+      </div>
       </div>
     </div>
   </div>

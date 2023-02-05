@@ -1,0 +1,51 @@
+.profile-table{
+    color: white;
+}
+
+.profile-title{
+    color: white;
+    text-align: center;
+}
+
+.profile-button{
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+    margin: 20px 0;
+}
+
+.profile-button:hover{
+    color: #fff;
+    background: #000;
+}
+
+.profile-edit-main{
+    color: #fff;
+}
+
+.profile-edit-main > h1{
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.profile-edit-button{
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+    margin: 20px 0;
+}
+
+.profile-edit-button:hover{
+    color: #fff;
+    background: #000;
+}

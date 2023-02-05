@@ -71,7 +71,7 @@ ja:
   no_result: 'ブックマーク中の掲示板がありません。'
   likes:
     title: 'お気に入り一覧'
-    no_result: 'お気に入り中の掲示板がありません。'
+    no_result: 'お気に入り中の投稿がありません。'
     create:
       success: 'お気に入りしました'
     destroy:

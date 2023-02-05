@@ -1,7 +1,7 @@
 <% content_for(:title, t('.title')) %>
 <div class="container">
   <div class="row">
-    <div class="col-md-10 offset-md-1">
+    <div class="col-md-10 offset-md-1 profile-edit-main">
       <h1><%= t('.title') %></h1>
       <%= form_with model: @user, url: profile_path, local: true do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
@@ -31,7 +31,7 @@
                         id: 'preview',
                         size: '100x100' %>
         </div>
-        <%= f.submit class: 'btn btn-primary' %>
+        <%= f.submit class: 'btn btn-border profile-edit-button' %>
       <% end %>
     </div>
   </div>

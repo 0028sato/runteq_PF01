@@ -36,6 +36,7 @@
           <% end %>
         </div>
 
+        <div class="show-icon">
           <% if logged_in? %>
             <% if current_user.own?(@post) %>
               <%= render 'crud_menus', post: @post %>
@@ -48,6 +49,7 @@
               <%= render 'like_button', post: @post  %>
             <% end %>
           <% end %>
+        </div>
 
               <li class="list-inline-item">by <%= @post.user.name %></li>
               <li class="list-inline-item"><%= l @post.created_at, format: :long  %></li>
@@ -63,7 +65,7 @@
               <%= form_with url: items_search_path, method: :get, local: true do |f| %>
                 <div class="form-group">
                   <%= f.text_field :keyword, value: params[:keyword], class: "form-control" %>
-                  <%= f.submit '製品名で検索', class: "form-control btn btn-success" %>
+                  <%= f.submit '製品名で検索', class: "form-control btn btn-border rakuten-serch-button" %>
                 </div>
               <% end %>
               <% if @items.present? %>
