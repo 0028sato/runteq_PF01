@@ -19,6 +19,13 @@ import "../stylesheets/post_index.scss"
 import "../stylesheets/post_show.scss"
 import "../stylesheets/post_form.scss"
 import "../stylesheets/header.scss"
+import "../stylesheets/footer.scss"
+import "../stylesheets/login.scss"
+import "../stylesheets/signup.scss"
+import "../stylesheets/profile.scss"
+import "../stylesheets/password_reset.scss"
+import "../stylesheets/like.scss"
+import "../stylesheets/search.scss"
 
 
 Rails.start()

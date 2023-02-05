@@ -1,0 +1,41 @@
+.board-search-button{
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+}
+
+.board-search-button:hover{
+    color: #fff;
+    background: #000;
+}
+
+@media screen and (max-width: 520px){
+
+    .search-main{
+        margin-top: 30px;
+        width: 700px;
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    .board-search-button{
+        border: 2px solid #000;
+        border-radius: 0;
+        background: #fff;
+        position: relative;
+        top: 40px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+
+    }
+    
+    .board-search-button:hover{
+        color: #fff;
+        background: #000;
+    }
+
+}

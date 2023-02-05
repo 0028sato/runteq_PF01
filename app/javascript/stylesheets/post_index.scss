@@ -1,9 +1,8 @@
 .flex{
     display: flex;
     margin: 20px;
-    border: solid 3px #6091d3;
+    border: solid 1px white;
     border-radius: 10px;
-    background: white;
 }
 
 .flex .card-img-top1{
@@ -14,21 +13,15 @@
     overflow: hidden;
 }
 
-.flex .right {
-    margin: 0px;
-    padding: 20px;
-    position: relative;
-    top: 10px;
-    left: 20px;
-  }
-
 .right p{
-    color: #5d627b;
+    color: black;
     background: white;
-    border-top: solid 5px #5d627b;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-    margin: 30px;
+    border-radius: 4px;
+    margin: 50px 30px 30px 30px;
+    size: 50px;
     width: 600px;
+    height: auto;
 }
 
 .body{
@@ -38,59 +31,34 @@
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
 
-
-.search-box-rakuten-show{
-    width: 600px;
-    height: 150px;
-    margin: 50px;
-    position: absolute;
-    top: 0;
-    left: 46%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    position: relative;
-    bottom: 200px;
-}
-
-.search-box-rakuten-show h4{
-    position: relative;
-    top: 0;
-    left: 28%;
-}
-
-.rakuten-search-box h4{
-    position: relative;
-    top: 0;
-    left: 38%;
-}
-
-.rakuten-form-group{
-    width: 600px;
-    height: 150px;
-    margin: 20px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    position: relative;
-    bottom: 200px;
-}
-
-.rakuten-list-group{
-    color: #5d627b;
-    background: white;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-    border: solid 3px black;
+.icon-edit-trash{
+    background-color: white;
+    width: 15%;
+    height: 25px;
     border-radius: 10px;
-    margin: 30px;
+    position: relative;
+    left: 18px;
+    margin: 5px;
 }
 
-.back-image{
-    background: url(/images/back-image.jpg);
-    background-size: cover;
+.list-inline-item{
+    color: white;
+    position: relative;
+    left: 5%;
+}
+
+.show-button{
+    position: relative;
+    left: 5%;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.show-button:hover{
+    color: #fff;
+    background: #000;
 }
 
 .pagenate{
@@ -114,15 +82,18 @@
     border-radius: 15px;    /*角を丸くする*/
   }
 
-@media (max-width: 599px){
+
+
+
+
+@media (max-width: 520px){
     .flex{
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 5px;
-        border: solid 3px #6091d3;
+        border: solid 1px white;
         border-radius: 10px;
-        background: white;
     }
     
     .flex .card-img-top1{
@@ -137,14 +108,14 @@
     }
     
     .right p{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: #5d627b;
+        color: black;
         background: white;
-        border-top: solid 5px #5d627b;
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+        border-radius: 4px;
+        margin: 20px 0px 20px 0px;
+        size: 50px;
         width: 300px;
+        height: auto;
     }
     
     .body{
@@ -152,56 +123,6 @@
         background: white;
         border-top: solid 5px #5d627b;
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-    }
-    
-    
-    .search-box-rakuten-show{
-        width: 300px;
-        height: 150px;
-        margin: 50px;
-        position: absolute;
-        top: 0;
-        left: 46%;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        position: relative;
-        bottom: 200px;
-    }
-    
-    .search-box-rakuten-show h4{
-        position: relative;
-        top: 0;
-        left: 28%;
-    }
-    
-    .rakuten-search-box h4{
-        position: relative;
-        top: 0;
-        left: 38%;
-    }
-    
-    .rakuten-form-group{
-        width: 300px;
-        height: 150px;
-        margin: 20px;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        position: relative;
-        bottom: 200px;
-    }
-    
-    .rakuten-list-group{
-        color: #5d627b;
-        background: white;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-        border: solid 3px black;
-        border-radius: 10px;
-        margin: 30px;
     }
     
     .back-image{

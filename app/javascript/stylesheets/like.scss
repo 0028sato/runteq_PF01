@@ -1,0 +1,18 @@
+.like-no-result{
+    color: white;
+    margin: 80px 0px 220px 0px;
+    font-size: 30px;
+    position: relative;
+    left: 27%;
+}
+
+@media screen and (max-width: 520px){
+    .like-no-result{
+        color: white;
+        margin: 80px 0px 220px 0px;
+        font-size: 16px;
+        position: relative;
+        left: 0%;
+        text-align: center;
+    }
+}

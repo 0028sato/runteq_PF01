@@ -1,29 +1,28 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-      <h1><%= t '.title' %></h1>
       <%= form_with model: @user, local: true do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
         <div class="form-group">
-          <%= f.label :name %>
-          <%= f.text_field :name, class: "form-control" %>
+          <% f.label :name %>
+          <%= f.text_field :name, class: "form-control signup-form",placeholder: "ニックネーム" %>
         </div>
         <div class="form-group">
-          <%= f.label :email %>
-          <%= f.text_field :email, class: "form-control" %>
+          <% f.label :email %>
+          <%= f.text_field :email, class: "form-control signup-form",placeholder: "email" %>
         </div>
         <div class="form-group">
-          <%= f.label :password %>
-          <%= f.password_field :password, class: "form-control" %>
+          <% f.label :password %>
+          <%= f.password_field :password, class: "form-control signup-form",placeholder: "password" %>
         </div>
         <div class="form-group">
-          <%= f.label :password_confirmation %>
-          <%= f.password_field :password_confirmation, class: "form-control" %>
+          <% f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, class: "form-control signup-form",placeholder: "password確認" %>
         </div>
-        <%= f.submit (t 'defaults.register'), class: 'btn btn-primary' %>
+        <%= f.submit (t 'defaults.register'), class: 'btn btn-border signup-button' %>
       <% end %>
       <div class='text-center'>
-        <%= link_to (t '.to_login_page'), login_path %>
+        <%= link_to (t '.to_login_page'), login_path, class:"login-link" %>
       </div>
     </div>
   </div>
