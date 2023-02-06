@@ -17,7 +17,7 @@
           <p><%= raw Rinku.auto_link("ボードの説明 : #{board.board_information}") %></p>
 
           <% @snow_bindings.each do |binding| %>
-          <p><%= "ビンディングの名前 : #{binding.binding_name}" %></p>
+          <p><%= "ビンディングの名前 : #{ binding.binding_name }" %></p>
           <p><%= raw Rinku.auto_link("ビンディングの説明 : #{binding.binding_information}") %></p>
 
           <% @snow_shoes.each do |shoes| %>
@@ -41,7 +41,7 @@
             <% if current_user.own?(@post) %>
               <%= render 'crud_menus', post: @post %>
                 <div class="twitter_share">
-                  <%= link_to "https://twitter.com/share?url=%0a#{ request.url }&text=:#{ shoes.shoe_name }%0a:#{binding.binding_name}%0a:#{board.board_name}&hashtags=スノーボード", target: '_blank' do %>
+                  <%= link_to "https://twitter.com/share?url=%0a#{ request.url }&text=:#{ shoes.shoe_name }%0a:#{ binding.binding_name }%0a:#{ board.board_name }&hashtags=スノーボード", target: '_blank' do %>
                   <i class="fab fa-twitter" style='color: #3399FF;'></i>シェア
                 <% end %>
               </div>
