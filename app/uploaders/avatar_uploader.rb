@@ -1,6 +1,12 @@
 class AvatarUploader < CarrierWave::Uploader::Base
   #画像をアップロード
-  storage :file
+  if Rails.env.development?
+    storage :file
+  elsif Rails.env.test?
+    storage :file
+  else
+    storage :fog
+  end
 
 #アップロードした画像の表示
   def store_dir
