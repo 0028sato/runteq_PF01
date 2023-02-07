@@ -1,4 +1,5 @@
 default_url_options:
-  host: 'https://runteq-snow-board.herokuapp.com'
+  protcol: 'https'
+  host: 'runteq-snow-board.herokuapp.com'
 sorcery:
   callback_url: 'https://runteq-snow-board.herokuapp.com/oauth/callback?provider=twitter'
