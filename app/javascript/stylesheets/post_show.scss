@@ -97,6 +97,112 @@
     background: #000;
 }
 
+
+@media (max-width: 960px) {
+    .flex_show{
+        display: flex;
+        margin: 40px;
+        border: solid 2px white;
+        border-radius: 10px;
+    }
+    
+    .card-img-top-show{
+        width: 400px;
+        height: 600px;
+        padding: 10px;
+        margin: 10px 20px 10px 20px;
+        align-items: center;
+    }
+    
+    .right_show {
+        margin: 30px 20px 20px 40px;
+    }
+    
+    .right_show p{
+        color: black;
+        background: white;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+        margin: 10px 10px 30px 10px;
+        width: 300px;
+    }
+    
+    .show-title{
+        text-align: center;
+        color: white;
+    }
+    
+    .twitter_share{
+        position: relative;
+        bottom: 39px;
+        left: 80px;
+    }
+    
+    .show-icon{
+        background-color: white;
+        width: 50%;
+        height: 25px;
+        border-radius: 10px;
+        position: relative;
+        left: 18px;
+        margin: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .search-box-rakuten-show{
+        width: 80%;
+        margin: 0 auto;
+        max-width: 500px;
+    }
+    
+    .search-box-rakuten-show h4{
+        text-align: center;
+    }
+    
+    .rakuten-search-box h4{
+        text-align: center;
+    }
+    
+    .rakuten-form-group{
+        width: 600px;
+        height: 150px;
+        margin: 20px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        position: relative;
+        bottom: 200px;
+    }
+    
+    .rakuten-list-group{
+        color: #5d627b;
+        background: white;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+        border: solid 3px black;
+        border-radius: 10px;
+        margin: 30px;
+    }
+    
+    .rakuten-serch-button{
+        border: 2px solid #000;
+        border-radius: 0;
+        background: #fff;
+        margin: 20px 0px 10px 0px;
+    }
+    
+    .rakuten-serch-button:hover{
+        color: #fff;
+        background: #000;
+    }
+}
+
+
+
+
+
 @media (max-width: 520px) {
     .flex_show{
         display: flex;

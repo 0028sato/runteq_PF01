@@ -44,12 +44,47 @@
 
 
 
-@media screen and (max-width: 1180px){
+@media screen and (max-width: 960px){
     .footer-bottom{
-        background-color: white;
-        max-width: 960px;
-        margin: 0 auto;
-    }
+    background-color: white;
+}
+
+.footer-title{
+    margin: 5px;
+    position: relative;
+    top: 50px;
+}
+
+.footer-contents > p{
+    display: inline-block;
+    margin: 10px;
+    position:relative;
+    left: 110%;
+    bottom: 40px;
+}
+
+.fa-envelope{
+    position: relative;
+    bottom: 5px;
+}
+
+.mail{
+    position: relative;
+    bottom: 5px;
+}
+
+.footer-customar{
+    margin: 10px;
+    position: relative;
+    left: 110%;
+    bottom: 30px;
+}
+
+.copyright{
+    position: relative;
+    left: 10px;
+    bottom: 30px;
+}
 
 }
 

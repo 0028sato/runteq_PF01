@@ -6,6 +6,19 @@
     left: 27%;
 }
 
+
+@media (max-width: 960px) {
+    .like-no-result{
+        color: white;
+        margin: 100px 0px 400px 0px;
+        font-size: 30px;
+        position: relative;
+        left: 0%;
+        text-align: center;
+    }
+}
+
+
 @media screen and (max-width: 520px){
     .like-no-result{
         color: white;

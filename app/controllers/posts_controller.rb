@@ -6,9 +6,6 @@ class PostsController < ApplicationController
     @q = Post.ransack(params[:q])
     @posts = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page]).per(20)
     @tag_list = Tag.all
-    @snow_board_list = SnowBoard.all
-    @snow_binding_list = SnowBinding.all
-    @snow_shoes_list = SnowShoe.all
   end
 
   def new
