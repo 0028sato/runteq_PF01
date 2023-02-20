@@ -83,6 +83,95 @@
   }
 
 
+  @media (max-width: 960px){
+    .flex{
+        display: flex;
+        margin: 20px;
+        width: 100%;
+        align-items: center;
+        border: solid 1px white;
+        border-radius: 10px;
+    }
+    
+    .flex .card-img-top1{
+        width: 300px;
+        height: 400px;
+        padding: 10px;
+        margin: 10px;
+        overflow: hidden;
+    }
+    
+    .right p{
+        color: black;
+        background: white;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+        border-radius: 4px;
+        margin: 50px 30px 30px 30px;
+        size: 50px;
+        width: 300px;
+        height: auto;
+    }
+    
+    .body{
+        color: #5d627b;
+        background: white;
+        border-top: solid 5px #5d627b;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    }
+    
+    .icon-edit-trash{
+        background-color: white;
+        width: 15%;
+        height: 25px;
+        border-radius: 10px;
+        position: relative;
+        left: 18px;
+        margin: 5px;
+    }
+    
+    .list-inline-item{
+        color: white;
+        position: relative;
+        left: 5%;
+    }
+    
+    .show-button{
+        position: relative;
+        left: 5%;
+        border: 2px solid #000;
+        border-radius: 0;
+        background: #fff;
+        margin-bottom: 10px;
+    }
+    
+    .show-button:hover{
+        color: #fff;
+        background: #000;
+    }
+    
+    .pagenate{
+        position: relative;
+        left: 15px;
+    }
+    
+    .pagination>li>a {          
+        border: none;     /*枠線をなくす*/
+        color: #696969;   /*文字の色を変える*/
+      }
+      
+      /* 表示しているページ番号のデザイン */
+      .pagination>.active>a {     
+        background: #93c9ff;     /*背景の色を変える*/
+        border-radius: 15px;     /*角を丸くする*/
+      }
+      
+      /*ホバー時のデザイン*/
+      .pagination>li>a:hover {        
+        border-radius: 15px;    /*角を丸くする*/
+      }
+}
+
+
 
 
 
