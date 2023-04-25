@@ -30,6 +30,7 @@ ja:
       to_register_page: '登録ページへ'
       password_forget: 'パスワードをお忘れの方はこちら'
       twitter_login: 'twitterでログインする'
+      google_login: 'Googleでログインする'
     create:
       success: 'ログインしました'
       fail: 'ログインに失敗しました'

@@ -116,6 +116,15 @@ Rails.application.config.sorcery.configure do |config|
     name: 'name'
   }
   #
+  config.external_providers = [:google]
+  config.google.key = ENV['google_client_id']
+  config.google.secret = ENV['google_client_secret']
+  config.google.callback_url = Settings.sorcery[:callback_url]
+  config.google.user_info_mapping = {
+    email: 'email',
+    name: 'name'
+  }
+  #
   # config.facebook.key = ""
   # config.facebook.secret = ""
   # config.facebook.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=facebook"
